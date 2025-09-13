@@ -41,7 +41,7 @@ export default function AboutPage() {
         </div>
         <div className="flex justify-center">
           <Image
-            src="/profile.png"
+            src="/profile-2.png"
             alt="Leonardo Ferigutti"
             width={400}
             height={400}
