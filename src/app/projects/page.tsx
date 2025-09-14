@@ -4,8 +4,6 @@ import { projectsMetadata } from "@/utils/metadata";
 import ProjectCardSmall from "@/components/ProjectCardSmall";
 
 export default async function ProjectsPage() {
- 
-
   return (
     <main className="w-full max-w-6xl mx-auto px-8 py-16 space-y-16">
       {/* Page Header */}
