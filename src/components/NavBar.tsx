@@ -9,9 +9,9 @@ export default function NavBar() {
       <Link href="/projects" className="text-gray-700 hover:text-blue-600">
         Projects
       </Link>
-      <Link href="/blog" className="text-gray-700 hover:text-blue-600">
+      {/* <Link href="/blog" className="text-gray-700 hover:text-blue-600">
         Blog
-      </Link>
+      </Link> */}
       <Link href="/about" className="text-gray-700 hover:text-blue-600">
         About
       </Link>
