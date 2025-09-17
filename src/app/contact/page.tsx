@@ -17,7 +17,8 @@ export default function ContactPage() {
 
       {/* Contact Methods */}
       <section className="grid md:grid-cols-2 gap-16">
-        {/* Contact Form */}
+        {/* Contact Form - TODO: Implement later */}
+        {/* 
         <div className="space-y-8">
           <h2 className="text-3xl font-bold">Send me a message</h2>
           <form className="space-y-6">
@@ -103,6 +104,28 @@ export default function ContactPage() {
               Send Message
             </button>
           </form>
+        </div>
+        */}
+
+        {/* Simple Email Contact */}
+        <div className="space-y-8">
+          <h2 className="text-3xl font-bold">Send me a message</h2>
+          <div className="bg-gray-800 rounded-xl p-8 text-center space-y-6">
+            <div className="space-y-4">
+              <FaEnvelope className="w-16 h-16 mx-auto text-blue-500" />
+              <h3 className="text-2xl font-semibold">Email me directly</h3>
+              <p className="text-gray-300">
+                Click the button below to open your email client and send me a
+                message.
+              </p>
+            </div>
+            <Link
+              href="mailto:leonardo@ferigutti.com?subject=Contact from Portfolio&body=Hi Leonardo,%0D%0A%0D%0A"
+              className="inline-block px-8 py-4 bg-blue-600 hover:bg-blue-700 rounded-lg font-medium text-lg transition-colors"
+            >
+              Send Email
+            </Link>
+          </div>
         </div>
 
         {/* Contact Information */}
