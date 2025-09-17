@@ -37,7 +37,7 @@ export default function HomeMainContent() {
         <div className="space-y-8">
           <div className="border-l-2 border-blue-500 pl-6">
             <h3 className="text-xl font-semibold">Current Role</h3>
-            <p className="text-gray-400 mb-2">Early-stage Startup • Present</p>
+            <p className="text-gray-400 mb-2">Early-stage Startup • 2021 -  Present</p>
             <p className="text-gray-300">
               Leading frontend development and product decisions for a web
               application in the early stages of growth.
