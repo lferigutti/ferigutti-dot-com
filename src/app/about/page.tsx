@@ -134,9 +134,9 @@ export default function AboutPage() {
             </div>
             <div className="flex-1 pb-8">
               <div className="space-y-2">
-                <h3 className="text-xl font-semibold">Core Developer</h3>
+                <h3 className="text-xl font-semibold">Core Full Stack Developer</h3>
                 <p className="text-blue-400">
-                  Early-stage Startup • 2023 - Present
+                  phelas GmbH • 2023 - Present
                 </p>
                 <p className="text-gray-300">
                   Co-leading product development and frontend architecture for a
@@ -154,10 +154,10 @@ export default function AboutPage() {
             </div>
             <div className="flex-1 pb-8">
               <div className="space-y-2">
-                <h3 className="text-xl font-semibold">Previous Role</h3>
-                <p className="text-gray-400">Company • 2022 - 2023</p>
+                <h3 className="text-xl font-semibold">Junior Python Developer</h3>
+                <p className="text-gray-400">phelas GmbH • 2021 - 2023</p>
                 <p className="text-gray-300">
-                  Description of your previous role and key achievements.
+                  Help Business Development team by creating tools to analyze usage of Energy Storage in diferents Renewable Energy Projects.
                 </p>
               </div>
             </div>
