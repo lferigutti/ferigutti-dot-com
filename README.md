@@ -1,7 +1,10 @@
 <div align="center">
   <h1>My Personal Website</h1>
-  <img class="text-center" src="https://www.ferigutti.com/_next/image?url=%2Fprofile-2.png&w=828&q=75" alt="Profile Image" style="max-width: 300px; border-radius: 50%; display: block; margin-left: auto; margin-right: auto;"/>
-  <p style="text-align: center; margin-top: 2rem;">Welcome to my personal website repository!</p>
+  <img src="https://www.ferigutti.com/_next/image?url=%2Fprofile-2.png&w=828&q=75" 
+     alt="Profile Image" 
+     width="300" 
+     style="border-radius:50%; display:block; margin:auto;" />
+  <p style="text-align: center; margin:auto;">Welcome to my personal website repository!</p>
   <p><strong>Author:</strong> Leonardo Ferigutti</p>
   <p><strong>Website:</strong> <a href="https://ferigutti.com" target="_blank" rel="noopener noreferrer">ferigutti.com</a></p>
 
