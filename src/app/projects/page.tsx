@@ -4,6 +4,10 @@ import { projectsMetadata } from "@/utils/metadata";
 import ProjectCardSmall from "@/components/ProjectCardSmall";
 
 export default async function ProjectsPage() {
+
+  
+  const allProjects = projectsMetadata.sort((a, b) => a.order - b.order);
+
   return (
     <main className="w-full max-w-6xl mx-auto px-8 py-16 space-y-16">
       {/* Page Header */}
@@ -19,9 +23,11 @@ export default async function ProjectsPage() {
       <section className="space-y-8">
         <h2 className="text-3xl font-bold">Featured Projects</h2>
         <div className="grid md:grid-cols-2 gap-8">
-          {projectsMetadata.map((metadata) => (
-            <ProjectCard projectMetadata={metadata} key={metadata.title} />
-          ))}
+          {allProjects
+            .filter((metadata) => metadata.featured_project)
+            .map((metadata) => (
+              <ProjectCard projectMetadata={metadata} key={metadata.title} />
+            ))}
         </div>
       </section>
 
@@ -29,7 +35,7 @@ export default async function ProjectsPage() {
       <section className="space-y-8">
         <h2 className="text-3xl font-bold">All Projects</h2>
         <div className="grid md:grid-cols-3 gap-6">
-          {projectsMetadata.map((metadata) => (
+          {allProjects.map((metadata) => (
             <ProjectCardSmall projectMetadata={metadata} key={metadata.title} />
           ))}
         </div>

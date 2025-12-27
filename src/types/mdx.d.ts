@@ -9,6 +9,8 @@ declare module "*.mdx" {
     date?: string;
     slug?: string;
     url?: string;
+    featured_project?: boolean;
+    order: number;
   }
   
   const Component: ComponentType;

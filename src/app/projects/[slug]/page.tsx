@@ -31,7 +31,7 @@ export default async function Page({
 }
 
 export function generateStaticParams() {
-  return [{ slug: "test-politico" }, { slug: "educational-site" }];
+  return [{ slug: "test-politico" }, { slug: "educational-site" }, { slug: "startup-simulator" }];
 }
 
 export const dynamicParams = false;

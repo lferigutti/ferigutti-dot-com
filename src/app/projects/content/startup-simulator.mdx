@@ -1,0 +1,48 @@
+export const metadata = {
+  title: "Startup Simulator",
+  date: "2025-01-15",
+  description:
+    "An interactive role-based simulator where you navigate realistic startup scenarios as a Founder, PM, or Engineer and uncover your working style.",
+  slug: "startup-simulator",
+  tags: ["FastAPI", "React", "Docker"],
+  featured_project: true,
+  order: 1,
+  thumbnail: "/startup-simulator.png",
+  url: "https://startup-simulator.htz.ferigutti.com/",
+};
+
+import Button from "@/components/Button";
+
+# Startup Simulator
+
+Startup Simulator is an interactive, role-based experience that lets you "play"
+through messy, realistic startup situations. You choose to step into the shoes
+of a Founder, Product Manager, or Engineer and make decisions under ambiguity,
+trade-offs, and competing priorities.
+
+As you go through branching scenarios, the app builds a lightweight profile of
+how you tend to operate in a startup context - from your risk appetite and
+ownership mindset to how you communicate and align with others. The goal is not
+to label you, but to surface patterns that can spark more honest conversations
+about how you like to work.
+
+**Key Features:**
+
+- Role-based paths: distinct scenario flows for Founders, PMs, and Engineers.
+- Branching scenario engine with meaningful trade-offs in each decision.
+- Under-the-hood trait scoring that maps choices to behaviours (e.g. bias for
+  action, collaboration, communication style).
+- Archetype summary at the end, with strengths and growth edges based on your
+  decisions.
+- Single-container deployment so the API and SPA can be shipped together.
+
+**Tech Stack:**
+
+- Backend: FastAPI, Pydantic, SQLAlchemy, SQLite, managed with uv.
+- Frontend: React, TypeScript, Vite, TanStack Router, Tailwind CSS, shadcn/ui.
+- Infrastructure: Docker multi-stage build with a single image serving both the
+  API and the built frontend.
+
+<Button href="https://startup-simulator.htz.ferigutti.com/" target="_blank">
+  Try the Simulator
+</Button>
