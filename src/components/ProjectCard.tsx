@@ -7,7 +7,7 @@ import Tag from "./Tag";
 export default function ProjectCard({ projectMetadata }: { projectMetadata : Metadata}) {
   return (
     <div className="bg-gray-800 rounded-xl p-6 hover:bg-gray-700 transition-colors">
-      <Link href={`/projects/${projectMetadata.slug}`}>
+      <a href={projectMetadata.url} target="_blank" rel="noopener noreferrer">
       <div className="space-y-4">
         <div className="w-full h-48 bg-gray-700 rounded-lg flex items-center justify-center">
           <Image
@@ -29,9 +29,12 @@ export default function ProjectCard({ projectMetadata }: { projectMetadata : Met
             )
           }
           </div>
+          <Link href={`/projects/${projectMetadata.slug}`} className="text-blue-400 hover:underline">
+            Read more &rarr;
+          </Link>
         </div>
       </div>
-      </Link>
+      </a>
     </div>
   );
 }

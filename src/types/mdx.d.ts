@@ -8,7 +8,7 @@ declare module "*.mdx" {
     thumbnail?: string;
     date?: string;
     slug?: string;
-    url?: string;
+    url: string;
     featured_project?: boolean;
     order: number;
   }
