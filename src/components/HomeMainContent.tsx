@@ -1,71 +1,55 @@
+import Link from "next/link";
+import ProjectCard from "./ProjectCard";
+import { projectsMetadata } from "@/utils/metadata";
+
 export default function HomeMainContent() {
+  // Get all projects except startup-simulator (which is in hero)
+  const otherProjects = projectsMetadata
+    .filter((p) => p.slug !== "startup-simulator")
+    .sort((a, b) => a.order - b.order)
+    .slice(0, 2);
+
   return (
-    <main className="w-full max-w-6xl mx-auto px-8 py-16 space-y-20">
-      {/* What I Do Section */}
-      <section id="what-i-do" className="space-y-6">
-        <h2 className="text-3xl font-bold">What I do</h2>
-        <div className="grid md:grid-cols-2 gap-12 items-start">
-          <div className="space-y-4">
-            <p className="text-lg text-gray-300 leading-relaxed">
-              Core developer of an early-stage web app, co-leading product and
-              frontend development with a focus on user experience.
-            </p>
+    <main className="w-full max-w-5xl mx-auto px-8 pb-24">
+      {/* More Projects Section */}
+      {otherProjects.length > 0 && (
+        <section className="space-y-6">
+          <div className="flex items-center justify-between">
+            <h2 className="text-lg font-medium text-zinc-400">More Projects</h2>
+            <Link 
+              href="/projects" 
+              className="text-sm text-zinc-500 hover:text-white transition-colors"
+            >
+              View all →
+            </Link>
           </div>
-          <div className="space-y-4">
-            <h3 className="text-xl font-semibold">My expertise includes:</h3>
-            <ul className="space-y-3">
-              <li className="flex items-start gap-3">
-                <span className="text-blue-500 mt-1">•</span>
-                <span>Frontend UX and design systems</span>
-              </li>
-              <li className="flex items-start gap-3">
-                <span className="text-blue-500 mt-1">•</span>
-                <span>Full-stack prototyping (React / Next.js / Python)</span>
-              </li>
-              <li className="flex items-start gap-3">
-                <span className="text-blue-500 mt-1">•</span>
-                <span>Building and iterating fast with small teams</span>
-              </li>
-            </ul>
+          
+          <div className="grid md:grid-cols-2 gap-5">
+            {otherProjects.map((metadata) => (
+              <ProjectCard projectMetadata={metadata} key={metadata.title} />
+            ))}
           </div>
-        </div>
-      </section>
+        </section>
+      )}
 
-      {/* Experience Section */}
-      <section id="experience" className="space-y-6">
-        <h2 className="text-3xl font-bold">Experience</h2>
-        <div className="space-y-8">
-          <div className="border-l-2 border-blue-500 pl-6">
-            <h3 className="text-xl font-semibold">Current Role</h3>
-            <p className="text-gray-400 mb-2">Early-stage Startup • 2021 -  Present</p>
-            <p className="text-gray-300">
-              Leading frontend development and product decisions for a web
-              application in the early stages of growth.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Technologies Section */}
-      <section id="technologies" className="space-y-6">
-        <h2 className="text-3xl font-bold">Technologies</h2>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+      {/* Technologies - Simple inline */}
+      <section className="mt-20 pt-12 border-t border-zinc-800">
+        <h2 className="text-sm font-medium mb-4 text-zinc-500">Technologies</h2>
+        <div className="flex flex-wrap gap-x-4 gap-y-2">
           {[
             "React",
             "Next.js",
             "TypeScript",
             "Python",
-            "Tailwind CSS",
             "Node.js",
             "PostgreSQL",
-            "Git",
           ].map((tech) => (
-            <div
+            <span
               key={tech}
-              className="bg-gray-800 rounded-lg p-4 text-center hover:bg-gray-700 transition-colors"
+              className="text-sm text-zinc-400"
             >
-              <span className="font-medium">{tech}</span>
-            </div>
+              {tech}
+            </span>
           ))}
         </div>
       </section>

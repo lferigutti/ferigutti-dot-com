@@ -2,31 +2,44 @@ import { FaEnvelope, FaGithub, FaLinkedinIn } from "react-icons/fa";
 
 export default function Footer() {
   return (
-    <footer className="flex gap-[24px] flex-wrap items-center justify-center border-t border-gray-700 py-8 mb-8">
-      <a
-        className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-        href="https://github.com/lferigutti"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <FaGithub />
-      </a>
-      <a
-        className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-        href="https://www.linkedin.com/in/leonardo-ferigutti-859913122/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <FaLinkedinIn />
-      </a>
-      <a
-        className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-        href="mailto:contact@ferigutti.com"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <FaEnvelope />
-      </a>
+    <footer className="py-12 mt-auto">
+      <div className="max-w-5xl mx-auto px-8">
+        <div className="flex flex-col items-center gap-6">
+          {/* Social Links */}
+          <div className="flex items-center gap-6">
+            <a
+              className="text-zinc-500 hover:text-white transition-colors"
+              href="https://github.com/lferigutti"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub"
+            >
+              <FaGithub className="w-5 h-5" />
+            </a>
+            <a
+              className="text-zinc-500 hover:text-white transition-colors"
+              href="https://www.linkedin.com/in/leonardo-ferigutti-859913122/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+            >
+              <FaLinkedinIn className="w-5 h-5" />
+            </a>
+            <a
+              className="text-zinc-500 hover:text-white transition-colors"
+              href="mailto:contact@ferigutti.com"
+              aria-label="Email"
+            >
+              <FaEnvelope className="w-5 h-5" />
+            </a>
+          </div>
+          
+          {/* Copyright */}
+          <p className="text-xs text-zinc-600">
+            © 2025 Leonardo Ferigutti
+          </p>
+        </div>
+      </div>
     </footer>
   );
 }

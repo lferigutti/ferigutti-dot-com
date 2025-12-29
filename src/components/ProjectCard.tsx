@@ -1,41 +1,38 @@
 import type { Metadata } from "@/models";
-import Image from "next/image";
 import Link from "next/link";
-import Tag from "./Tag";
+import { FaArrowRight } from "react-icons/fa";
 
-
-export default function ProjectCard({ projectMetadata }: { projectMetadata : Metadata}) {
+export default function ProjectCard({ projectMetadata }: { projectMetadata: Metadata }) {
   return (
-    <div className="bg-gray-800 rounded-xl p-6 hover:bg-gray-700 transition-colors">
-      <a href={projectMetadata.url} target="_blank" rel="noopener noreferrer">
-      <div className="space-y-4">
-        <div className="w-full h-48 bg-gray-700 rounded-lg flex items-center justify-center">
-          <Image
-            src={projectMetadata.thumbnail ?? ""}
-            alt={projectMetadata.slug ?? "default-picture"}
-            width={400}
-            height={100}
-
-          />
-        </div>
-        <div className="space-y-3 mt-3">
-          <h3 className="text-xl font-semibold">{projectMetadata.title}</h3>
-          <p className="text-gray-300">
-           {projectMetadata.description}
+    <Link 
+      href={`/projects/${projectMetadata.slug}`}
+      className="card group block p-6 hover:border-zinc-600"
+    >
+      <div className="flex items-start justify-between gap-4">
+        <div className="flex-1 space-y-2">
+          <h3 className="text-lg font-medium group-hover:text-white transition-colors">
+            {projectMetadata.title}
+          </h3>
+          <p className="text-sm text-zinc-400 line-clamp-2">
+            {projectMetadata.description}
           </p>
-          <div className="flex flex-wrap gap-2">
-            {projectMetadata.tags && projectMetadata.tags.map(
-              tag => {return (<Tag tag={tag} key={tag} />)}
-            )
-          }
-          </div>
-          <Link href={`/projects/${projectMetadata.slug}`} className="text-blue-400 hover:underline">
-            Read more &rarr;
-          </Link>
+          
+          {/* Tags */}
+          {projectMetadata.tags && (
+            <div className="flex flex-wrap gap-2 pt-2">
+              {projectMetadata.tags.slice(0, 3).map((tag) => (
+                <span 
+                  key={tag} 
+                  className="text-xs px-2 py-1 rounded-md bg-zinc-800 text-zinc-400"
+                >
+                  {tag}
+                </span>
+              ))}
+            </div>
+          )}
         </div>
+        <FaArrowRight className="w-4 h-4 text-zinc-500 group-hover:text-white group-hover:translate-x-1 transition-all mt-1 flex-shrink-0" />
       </div>
-      </a>
-    </div>
+    </Link>
   );
 }
-

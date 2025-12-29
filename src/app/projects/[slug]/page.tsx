@@ -9,24 +9,33 @@ export default async function Page({
   );
 
   return (
-    <div>
-      <div className="mb-6">
-        <div className="flex flex-wrap gap-2 mb-4">
-          {metadata.tags?.map((tag: string) => (
-            <span
-              key={tag}
-              className="px-3 py-1 bg-blue-600 text-white text-sm rounded-full"
-            >
-              {tag}
-            </span>
-          ))}
-        </div>
-        <p className="text-gray-400 text-sm">
-          Published: {new Date(metadata.date).toLocaleDateString()}
-        </p>
+    <article className="max-w-3xl mx-auto px-8">
+      {/* Tags */}
+      <div className="flex flex-wrap gap-2 mb-4">
+        {metadata.tags?.map((tag: string) => (
+          <span
+            key={tag}
+            className="px-2.5 py-1 bg-zinc-800 text-zinc-400 text-xs rounded-md"
+          >
+            {tag}
+          </span>
+        ))}
       </div>
-      <Project />
-    </div>
+      
+      {/* Date */}
+      <p className="text-zinc-500 text-sm mb-8">
+        {new Date(metadata.date).toLocaleDateString("en-US", {
+          year: "numeric",
+          month: "long",
+          day: "numeric",
+        })}
+      </p>
+      
+      {/* MDX Content */}
+      <div className="prose prose-invert max-w-none">
+        <Project />
+      </div>
+    </article>
   );
 }
 

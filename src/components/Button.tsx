@@ -10,7 +10,7 @@ interface LinkProps extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
 
 const Button = ({ children, href, ...props }: ButtonProps | LinkProps) => {
   const baseClasses =
-    "inline-flex items-center justify-center px-6 rounded-lg bg-blue-600 hover:bg-blue-700 text-white font-medium transition-colors no-underline cursor-pointer pt-4";
+    "inline-flex items-center justify-center px-5 py-2 rounded-lg bg-white hover:bg-zinc-200 text-zinc-900 font-medium text-sm transition-colors no-underline cursor-pointer mt-4 [&>p]:m-0 [&>p]:p-0 [&>p]:text-inherit";
 
   if (href) {
     const {

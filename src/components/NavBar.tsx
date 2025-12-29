@@ -8,24 +8,27 @@ import { usePathname } from "next/navigation";
 const navItems = [
   { name: "Home", path: "/" },
   { name: "Projects", path: "/projects" },
-  // { name: "Blog", path: "/blog" },
-  { name: "About", path: "/about" },
-  { name: "Contact", path: "/contact" },
 ];
 
 export default function NavBar() {
   const pathname = usePathname();
-  const navBarClass = (path: string) => pathname === path ? "text-blue-800 font-semibold" : "text-gray-700 hover:text-blue-700";
-
+  const navBarClass = (path: string) => 
+    pathname === path 
+      ? "text-white font-medium" 
+      : "text-zinc-400 hover:text-white";
 
   return (
-    <nav className="flex justify-between items-center space-x-8 py-4 px-8 border-b border-gray-700">
+    <nav className="flex justify-between items-center py-6 px-8 max-w-6xl mx-auto w-full">
       <Link href="/" className="flex items-center">
-        <Image src="/logo-dark.png" alt="Logo" width={150} height={120} />
+        <Image src="/logo-dark.png" alt="Logo" width={120} height={96} />
       </Link>
-      <div className="flex space-x-8">
+      <div className="flex items-center gap-8">
         {navItems.map((item) => (
-          <Link key={item.name} href={item.path} className={navBarClass(item.path)}>
+          <Link 
+            key={item.name} 
+            href={item.path} 
+            className={`text-sm transition-colors ${navBarClass(item.path)}`}
+          >
             {item.name}
           </Link>
         ))}
