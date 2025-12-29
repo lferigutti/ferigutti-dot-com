@@ -40,7 +40,7 @@ export default async function Page({
 }
 
 export function generateStaticParams() {
-  return [{ slug: "test-politico" }, { slug: "educational-site" }, { slug: "startup-simulator" }];
+  return [{ slug: "test-politico" }, { slug: "educational-site" }, { slug: "startup-simulator" }, { slug: "catalyst-platform" }, { slug: "personal-website" }];
 }
 
 export const dynamicParams = false;
