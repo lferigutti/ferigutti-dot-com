@@ -1,8 +1,8 @@
-import ProjectCard from "@/components/ProjectCard";
+import ProjectCard from "@/components/sections/common/ProjectCard";
 import Link from "next/link";
 import { projectsMetadata } from "@/utils/metadata";
-import ProjectCardSmall from "@/components/ProjectCardSmall";
-import BackToNav from "@/components/BackToNav";
+import ProjectCardSmall from "@/components/sections/common/ProjectCardSmall";
+import BackToNav from "@/components/ui/BackToNav";
 
 export default async function ProjectsPage() {
   const allProjects = projectsMetadata.sort((a, b) => a.order - b.order);

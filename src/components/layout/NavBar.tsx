@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import ThemeToggle from "./ThemeToggle";
+import ThemeToggle from "../ui/ThemeToggle";
 
 
 const navItems = [
@@ -21,7 +21,7 @@ export default function NavBar() {
 
   return (
     <nav className="flex justify-between items-center py-6 px-8 max-w-6xl mx-auto w-full">
-      <Link href="/" className="flex items-center">
+      <Link href="/public" className="flex items-center">
         <Image src="/logo-dark.png" alt="Logo" width={120} height={96} />
       </Link>
       <div className="flex items-center gap-8">

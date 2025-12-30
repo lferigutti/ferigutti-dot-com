@@ -1,5 +1,5 @@
-import BackToNav from "@/components/BackToNav";
-import LanguageSwitcher from "@/components/LanguageSwitcher";
+import BackToNav from "@/components/ui/BackToNav";
+import LanguageSwitcher from "@/components/ui/LanguageSwitcher";
 import { notFound } from "next/navigation";
 import { blogMetadata } from "@/utils/metadata";
 

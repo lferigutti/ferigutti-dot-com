@@ -1,5 +1,5 @@
-import BackToNav from "@/components/BackToNav";
-import BlogCard from "@/components/BlogCard";
+import BackToNav from "@/components/ui/BackToNav";
+import BlogCard from "@/components/sections/common/BlogCard";
 import { blogMetadata } from "@/utils/metadata";
 
 export default function BlogListPage() {

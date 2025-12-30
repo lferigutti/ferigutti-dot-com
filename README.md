@@ -1,6 +1,6 @@
 <div align="center">
   <h1>My Personal Website</h1>
-  <img src="https://www.ferigutti.com/_next/image?url=%2Fprofile-2.png&w=828&q=75" 
+  <img src="https://www.ferigutti.com/_next/image?url=%2Fprofile.png&w=256&q=75" 
      alt="Profile Image" 
      width="300" 
      style="border-radius:50%; display:block; margin:auto;" />

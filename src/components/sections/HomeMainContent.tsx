@@ -1,5 +1,5 @@
 import Link from "next/link";
-import ProjectCard from "./ProjectCard";
+import ProjectCard from "@/components/sections/common/ProjectCard";
 import { projectsMetadata, blogMetadata } from "@/utils/metadata";
 
 export default function HomeMainContent() {

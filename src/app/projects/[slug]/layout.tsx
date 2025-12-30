@@ -1,4 +1,4 @@
-import BackToNav from "@/components/BackToNav";
+import BackToNav from "@/components/ui/BackToNav";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
