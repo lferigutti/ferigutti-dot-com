@@ -1,0 +1,114 @@
+export const metadata = {
+  title: "Construyendo un proyecto con IA: cómo lo encaro hoy",
+  date: "2025-12-29",
+  description: "Cómo encaro hoy un proyecto personal en un mundo donde la IA ya es parte del proceso",
+  slug: "startup-app",
+  lang: "es",
+  tags: ["IA", "Desarrollo web", "Programacion", "Startup", "Startup Role Simulator"],
+};
+
+
+Este proyecto lo hice para jugar un poco con la IA, mi creatividad y mis aptitudes como programador.  
+No es un tutorial paso a paso ni una guía definitiva, sino una forma de mostrar **cómo encaro hoy un proyecto personal en un mundo donde la IA ya es parte del proceso**.
+
+La idea es compartir el enfoque, las decisiones y los errores, para que quizás te sirva como referencia cuando encares tu propio proyecto.
+
+---
+
+## Explorando ideas (antes de escribir una sola línea de código)
+
+Lo primero que hice fue un brainstorming de ideas con ChatGPT. En mi experiencia, sigue siendo uno de los mejores modelos para debatir ideas en general. Es el que más contexto tiene sobre mis objetivos y mi perfil profesional, y eso ayuda mucho cuando estás buscando dirección más que respuestas correctas.
+
+La clave acá es usarlo como **inspiración**, no como generador automático de ideas. Hay que preguntar, repreguntar y contrastar hasta que algo realmente te haga ruido.
+
+Y acá va el primer punto importante:
+
+> Si no te apasiona el tema, o no te interesa lo suficiente, no vas a tener el entusiasmo necesario para seguir adelante cuando deja de ser novedad.
+
+Después de bastante ida y vuelta, llegué a la conclusión de que quería hacer un juego de rol para explorar la personalidad de distintos roles dentro de una startup.  
+No es casual: soy un apasionado de las startups y, además, trabajo en una en Múnich, Alemania.
+
+---
+
+## Planificando la app (pensar antes de codear)
+
+Una vez elegido el tema, me fui a uno de los IDEs del momento (en ese entonces, Cursor) y empecé a planear la app.  
+Para eso generé un archivo `.md` con la idea general del proyecto, el flujo del usuario y una primera aproximación a la infraestructura.
+
+Tenía claro que quería usar **FastAPI para el backend** y **React para el frontend**. Podría haber elegido otros frameworks, pero quería profundizar un poco más en FastAPI, así que fue una decisión más personal que técnica.
+
+---
+
+## Backend: colaborar con la IA, no delegar el criterio
+
+Como soy más ingeniero que diseñador, decidí empezar por el backend.  
+Acá fui alternando entre código propio y código generado por el agente. En las partes donde me siento cómodo con el framework, avanzaba solo y usaba el autocompletado como apoyo.
+
+Cuando aparecían partes más aburridas o repetitivas, se las pasaba al agente. Por ejemplo, conectar SQLite o generar boilerplate.
+
+> El agente es perfecto para tareas que son aburridas o muy repetitivas, especialmente cuando ya sabés cómo deberían funcionar.
+
+Eso sí: **siempre revisé que lo que se generaba tuviera sentido** y forcé la creación de tests.  
+Para ser sincero, la mayoría de los tests de los endpoints los generó algún modelo. Yo me limité a revisar el coverage y, sobre todo, que realmente validaran lo que tenían que validar.
+
+---
+
+## Frontend: apoyarse en herramientas sin perder control
+
+Para el frontend, como no soy diseñador, decidí inspirarme usando herramientas como [v0](https://v0.dev/) o [Lovable](https://lovable.ai/).
+
+Antes de ir directo a esas herramientas, generé con un agente de Cursor un `.md` con una descripción clara de la app y la UX esperada. Ese documento fue clave para no generar pantallas al azar.
+
+A partir de ahí:
+- generé un boceto visual
+- elegí una base
+- y empecé a trabajar en local
+
+Sé que se puede “vibecodear” online, pero siempre preferí trabajar localmente y reforzar desde ahí. Nunca fui muy fan de apostar todos los huevos a la misma canasta.
+
+Desde esa base estética fui conectando backend y frontend, refinando las features necesarias para el MVP.  
+Esa iteración me consumió muchos tokens y muchas horas, pero ahí es donde realmente se aprende a **colaborar con la IA** y a ser crítico con cada cosa que se genera.
+
+---
+
+## Producto final: pensar como usuario (y como PM)
+
+Fui jugando al juego y puliendo detalles de UX a medida que los iba detectando.  
+Acá es clave ser tu propio tester y ser bastante crítico con el MVP. Esta es la parte donde, queramos o no, tenemos que ponernos el sombrero de product manager, algo que ya mencioné en el post anterior.
+
+Cuando sentí que el producto estaba lo suficientemente sólido, llegó el momento de publicarlo.
+
+---
+
+## Deploy (una decisión personal)
+
+Hay mil formas de hacer un deploy hoy en día. En mi caso, como tengo experiencia con self-hosting, decidí usar:
+- una VPS en Hetzner
+- dominio en Cloudflare
+- Coolify para manejar los deployments
+
+Para eso tuve que crear el Dockerfile y servir el frontend como archivos estáticos desde la raíz de la API.
+
+No es la forma más fácil, ni la que le recomendaría a todo el mundo.  
+Si estás empezando, Vercel, Firebase u otros servicios similares probablemente sean más que suficientes. Lo más probable es que tu app nunca tenga un tráfico que justifique preocuparse por costos en esa etapa.
+
+---
+
+## Es hora de compartir
+
+Una vez online, compartí la app con amigos y conocidos para recibir feedback. También la publiqué en algunos foros de Reddit y en Twitter/X.
+
+Todavía no tengo una comunidad grande, que es clave para iterar rápido y mejorar el producto, pero es parte del proceso.  
+Si querés probarla, podés hacerlo acá:  
+👉 **[Startup Role Simulator](https://startup-simulator.htz.ferigutti.com/)**
+
+---
+
+## Conclusión
+
+Esta es solo **una forma** de encarar un proyecto hoy. Hay muchas otras, todas con pros y contras.  
+Personalmente, tengo ganas de probar otras herramientas, como Claude Code, para comparar ese enfoque más de pair programming con el que tuve acá.
+
+La idea es probar, iterar, ajustar y volver a probar, hasta encontrar una forma de trabajar que funcione con vos y con tu estilo.
+
+Gracias por leer, y hasta la próxima.

@@ -7,6 +7,8 @@ import { metadata as websiteMeta } from "@/app/projects/content/personal-website
 // Blog imports
 import { metadata as ansiedadEs } from "@/app/blog/content/ansiedad-ia.es.mdx";
 import { metadata as ansiedadEn } from "@/app/blog/content/ansiedad-ia.en.mdx";
+import { metadata as startupAppEs } from "@/app/blog/content/startup-app.es.mdx";
+import { metadata as startupAppEn } from "@/app/blog/content/startup-app.en.mdx";
 
 export const projectsMetadata = [
   { ...polMeta, slug: "test-politico" },
@@ -18,16 +20,29 @@ export const projectsMetadata = [
 
 export const blogMetadata = [
   {
-    slug: "ansiedad-ia",
-    date: ansiedadEs.date ?? "",
+    slug: ansiedadEs.slug,
+    date: ansiedadEs.date,
     titles: {
-      es: ansiedadEs.title ?? "",
-      en: ansiedadEn.title ?? "",
+      es: ansiedadEs.title,
+      en: ansiedadEn.title,
     },
     description: {
-      es: ansiedadEs.description ?? "",
-      en: ansiedadEn.description ?? "",
+      es: ansiedadEs.description,
+      en: ansiedadEn.description,
     },
-    tags: ansiedadEs.tags ?? [],
+    tags: ansiedadEs.tags,
+  },
+  {
+    slug: startupAppEs.slug,
+    date: startupAppEs.date,
+    titles: {
+      es: startupAppEs.title,
+      en: startupAppEn.title,
+    },
+    description: {
+      es: startupAppEs.description,
+      en: startupAppEn.description,
+    },
+    tags: startupAppEs.tags,
   }
 ];
