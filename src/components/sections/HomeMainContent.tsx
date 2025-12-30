@@ -9,7 +9,8 @@ export default function HomeMainContent() {
     .slice(0, 2);
 
   const latestPosts = blogMetadata
-    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+    .filter((post) => post.date)
+    .sort((a, b) => new Date(b.date!).getTime() - new Date(a.date!).getTime())
     .slice(0, 2);
 
   return (
@@ -45,23 +46,25 @@ export default function HomeMainContent() {
               Read more →
             </Link>
           </div>
-          <div className="divide-y divide-zinc-800/50">
+          <div className="space-y-4">
             {latestPosts.map((post) => (
               <Link 
                 key={post.slug} 
                 href={`/blog/${post.slug}`}
-                className="group py-4 flex flex-col md:flex-row md:items-center justify-between gap-2 first:pt-0"
+                className="group block p-4 -mx-4 rounded-xl hover:bg-zinc-800/40 transition-colors"
               >
-                <h3 className="text-zinc-300 group-hover:text-white transition-colors font-medium">
-                  {post.titles.es}
-                </h3>
-                <time className="text-sm text-zinc-500 tabular-nums">
-                  {new Date(post.date).toLocaleDateString("es-ES", {
-                    year: "numeric",
-                    month: "long",
-                    day: "numeric",
-                  })}
-                </time>
+                <div className="flex flex-col md:flex-row md:items-baseline justify-between gap-2">
+                  <h3 className="text-zinc-300 group-hover:text-zinc-100 transition-colors font-medium">
+                    {post.titles.es}
+                  </h3>
+                  <time className="text-sm text-zinc-500 tabular-nums">
+                    {new Date(post.date!).toLocaleDateString("es-ES", {
+                      year: "numeric",
+                      month: "long",
+                      day: "numeric",
+                    })}
+                  </time>
+                </div>
               </Link>
             ))}
           </div>

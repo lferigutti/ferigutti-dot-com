@@ -3,6 +3,12 @@ import BlogCard from "@/components/sections/common/BlogCard";
 import { blogMetadata } from "@/utils/metadata";
 
 export default function BlogListPage() {
+  const validPosts = blogMetadata.filter(
+    (post): post is typeof post & { slug: string; date: string; tags: string[] } => {
+      return !!post.slug && !!post.date && !!post.tags;
+    }
+  );
+
   return (
     <main className="w-full max-w-4xl mx-auto px-8 py-8 space-y-16">
       <BackToNav title="Back to Home" href="/" />
@@ -15,7 +21,7 @@ export default function BlogListPage() {
       </section>
 
       <section className="grid gap-6">
-        {blogMetadata.map((post) => (
+        {validPosts.map((post) => (
           <BlogCard key={post.slug} post={post} />
         ))}
       </section>
