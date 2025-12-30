@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import ThemeToggle from "./ThemeToggle";
 
 
 const navItems = [
@@ -33,6 +34,7 @@ export default function NavBar() {
             {item.name}
           </Link>
         ))}
+        <ThemeToggle />
       </div>
     </nav>
   );
