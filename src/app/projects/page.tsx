@@ -10,11 +10,9 @@ export default async function ProjectsPage() {
   const otherProjects = allProjects.filter((p) => !p.featured_project);
 
   return (
-    <main className="w-full max-w-5xl mx-auto px-8 py-8 space-y-16">
-      
+    <main className="w-full max-w-5xl mx-auto px-8 py-8 space-y-16">    
       <BackToNav title="Back to Home" href="/" />
-      
-      {/* Page Header */}
+      {/* Page Header */} 
       <section className="space-y-4">
         <h1 className="text-4xl font-bold tracking-tight">Projects</h1>
         <p className="text-lg text-zinc-400 max-w-2xl">

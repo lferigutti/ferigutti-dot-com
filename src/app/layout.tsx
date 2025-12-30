@@ -67,6 +67,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />
         <NavBar />
+        
         <main className="flex-1">{children}</main>
         <Analytics />
         <Footer />

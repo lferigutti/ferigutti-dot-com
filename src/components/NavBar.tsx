@@ -8,6 +8,7 @@ import { usePathname } from "next/navigation";
 const navItems = [
   { name: "Home", path: "/" },
   { name: "Projects", path: "/projects" },
+  { name: "Blog", path: "/blog" },
 ];
 
 export default function NavBar() {
