@@ -1,33 +1,21 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+export default function ThemeToggle({
+  isDark,
+  handleToggleTheme,
+}: {
+  isDark: boolean;
+  handleToggleTheme: () => void;
+}) {
 
-export default function ThemeToggle() {
-  const [isDark, setIsDark] = useState(true)
-
-  useEffect(() => {
-    // Check initial theme from localStorage or default to dark
-    const savedTheme = localStorage.getItem('theme')
-    const prefersDark = savedTheme === 'dark' || (!savedTheme)
-    setIsDark(prefersDark)
-    document.documentElement.classList.toggle('light', !prefersDark)
-  }, [])
-
-  const toggleTheme = () => {
-    const newIsDark = !isDark
-    setIsDark(newIsDark)
-    document.documentElement.classList.toggle('light', !newIsDark)
-    localStorage.setItem('theme', newIsDark ? 'dark' : 'light')
-  }
 
   return (
     <button
-      onClick={toggleTheme}
+      onClick={handleToggleTheme}
       className="p-2 rounded-lg hover:bg-zinc-800 transition-colors"
-      aria-label={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
+      aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}
     >
-      {isDark ?
-        (
+      {isDark ? (
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="18"
@@ -42,8 +30,7 @@ export default function ThemeToggle() {
         >
           <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />
         </svg>
-      )
-        : (
+      ) : (
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="18"
@@ -66,7 +53,7 @@ export default function ThemeToggle() {
           <path d="m6.34 17.66-1.41 1.41" />
           <path d="m19.07 4.93-1.41 1.41" />
         </svg>
-      ) }
+      )}
     </button>
-  )
+  );
 }
