@@ -171,17 +171,18 @@ button, a, input, textarea {
     color: #27272a !important; /* zinc-800 */
   }
 
-  /* Light mode for language switcher - invert active/inactive states */
-  html.light .bg-zinc-100 {
-    background-color: #27272a !important; /* dark bg for active in light mode */
+  /* Light mode for language switcher - using current component classes */
+  html.light .rounded-full.bg-zinc-800 {
+    background-color: #18181b !important; /* Dark active background */
   }
   
-  html.light .bg-zinc-100.text-zinc-900 {
-    color: #fafafa !important; /* light text on dark bg */
+  html.light .rounded-full.bg-zinc-800.text-white {
+    color: #fafafa !important; /* Light text on dark active */
   }
 
-  html.light .hover\:text-white:hover {
-    color: #18181b !important; /* dark text on hover in light mode */
+  html.light .rounded-full.bg-zinc-900\/50 {
+    background-color: #f4f4f5 !important; /* Light container background */
+    border-color: #e4e4e7 !important;
   }
 }
 

@@ -21,24 +21,24 @@ export default function BlogCard({ post }: BlogCardProps) {
         <div className="flex-1 space-y-3">
           <div className="flex items-center gap-3 text-xs text-zinc-500">
             <time dateTime={post.date}>
-              {new Date(post.date).toLocaleDateString("es-ES", {
+              {new Date(post.date).toLocaleDateString("en-US", {
                 year: "numeric",
                 month: "long",
                 day: "numeric",
               })}
             </time>
             <div className="flex gap-2">
-              <span className="px-1.5 py-0.5 bg-zinc-800/50 rounded text-zinc-500">ES</span>
               <span className="px-1.5 py-0.5 bg-zinc-800/50 rounded text-zinc-500">EN</span>
+              <span className="px-1.5 py-0.5 bg-zinc-800/50 rounded text-zinc-500">ES</span>
             </div>
           </div>
           
           <h3 className="text-xl font-semibold group-hover:text-white transition-colors">
-            {post.titles.es}
+            {post.titles.en}
           </h3>
           
           <p className="text-sm text-zinc-400 line-clamp-2 leading-relaxed">
-            {post.description.es}
+            {post.description.en}
           </p>
           
           <div className="flex flex-wrap gap-2 pt-1">

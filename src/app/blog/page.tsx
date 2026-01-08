@@ -16,7 +16,7 @@ export default function BlogListPage() {
         <h1 className="text-4xl font-bold tracking-tight">Blog</h1>
         <p className="text-zinc-400 text-lg max-w-2xl">
           Thoughts about web development, design and technology. 
-          Mainly in Spanish, with English versions available.
+          Mainly in English, with Spanish versions available.
         </p>
       </section>
 

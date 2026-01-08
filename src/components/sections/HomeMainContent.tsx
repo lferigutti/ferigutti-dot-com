@@ -55,10 +55,10 @@ export default function HomeMainContent() {
               >
                 <div className="flex flex-col md:flex-row md:items-baseline justify-between gap-2">
                   <h3 className="text-zinc-300 group-hover:text-zinc-100 transition-colors font-medium">
-                    {post.titles.es}
+                    {post.titles.en}
                   </h3>
                   <time className="text-sm text-zinc-500 tabular-nums">
-                    {new Date(post.date!).toLocaleDateString("es-ES", {
+                    {new Date(post.date!).toLocaleDateString("en-US", {
                       year: "numeric",
                       month: "long",
                       day: "numeric",

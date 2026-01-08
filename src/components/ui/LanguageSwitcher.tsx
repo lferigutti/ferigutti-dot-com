@@ -1,6 +1,7 @@
 "use client";
 
 import { useRouter, usePathname, useSearchParams } from "next/navigation";
+import { HiOutlineGlobeAlt } from "react-icons/hi2";
 
 export default function LanguageSwitcher({ currentLang }: { currentLang: string }) {
   const router = useRouter();
@@ -13,28 +14,30 @@ export default function LanguageSwitcher({ currentLang }: { currentLang: string 
     router.push(`${pathname}?${params.toString()}`);
   };
 
+  const languages = [
+    { id: "en", label: "English" },
+    { id: "es", label: "Español" },
+  ];
+
   return (
-    <div className="flex gap-2 mb-8">
-      <button
-        onClick={() => toggleLanguage("es")}
-        className={`px-3 py-1 rounded-md text-sm transition-colors ${
-          currentLang === "es"
-            ? "bg-zinc-100 text-zinc-900 font-medium"
-            : "bg-zinc-800 text-zinc-400 hover:text-white"
-        }`}
-      >
-        Español 🇪🇸
-      </button>
-      <button
-        onClick={() => toggleLanguage("en")}
-        className={`px-3 py-1 rounded-md text-sm transition-colors ${
-          currentLang === "en"
-            ? "bg-zinc-100 text-zinc-900 font-medium"
-            : "bg-zinc-800 text-zinc-400 hover:text-white"
-        }`}
-      >
-        English 🇺🇸
-      </button>
+    <div className="flex items-center gap-4 mb-10">
+      <div className="flex p-1 bg-zinc-900/50 backdrop-blur-sm border border-zinc-800 rounded-full w-fit">
+        {languages.map((lang) => (
+          <button
+            key={lang.id}
+            onClick={() => toggleLanguage(lang.id)}
+            className={`
+              relative px-4 py-1.5 rounded-full text-xs font-medium transition-all duration-300
+              ${currentLang === lang.id 
+                ? "text-white bg-zinc-800 shadow-sm" 
+                : "text-zinc-500 hover:text-zinc-300"
+              }
+            `}
+          >
+            {lang.label}
+          </button>
+        ))}
+      </div>
     </div>
   );
 }

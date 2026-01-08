@@ -20,29 +20,29 @@ export const projectsMetadata = [
 
 export const blogMetadata = [
   {
-    slug: ansiedadEs.slug,
-    date: ansiedadEs.date,
+    slug: ansiedadEn.slug,
+    date: ansiedadEn.date,
     titles: {
-      es: ansiedadEs.title,
       en: ansiedadEn.title,
+      es: ansiedadEs.title,
     },
     description: {
-      es: ansiedadEs.description,
       en: ansiedadEn.description,
+      es: ansiedadEs.description,
     },
-    tags: ansiedadEs.tags,
+    tags: ansiedadEn.tags,
   },
   {
-    slug: startupAppEs.slug,
-    date: startupAppEs.date,
+    slug: startupAppEn.slug,
+    date: startupAppEn.date,
     titles: {
-      es: startupAppEs.title,
       en: startupAppEn.title,
+      es: startupAppEs.title,
     },
     description: {
-      es: startupAppEs.description,
       en: startupAppEn.description,
+      es: startupAppEs.description,
     },
-    tags: startupAppEs.tags,
+    tags: startupAppEn.tags,
   }
 ];
