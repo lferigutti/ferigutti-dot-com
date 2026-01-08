@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { FaLinkedinIn, FaEnvelope, FaGithub, FaArrowRight } from "react-icons/fa";
+import Button from "../ui/Button";
 
 export default function HeroSection() {
   return (
@@ -18,8 +19,8 @@ export default function HeroSection() {
         <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-3">
           Hi, I&apos;m Leonardo.
         </h1>
-        <p className="text-lg text-zinc-400 leading-relaxed max-w-lg mb-8">
-          Full-stack dev who ships products, not just code.
+        <p className="text-lg text-zinc-400 leading-relaxed max-w-lg mb-4">
+          Product engineer building things in public.
         </p>
 
         {/* Social Links */}
@@ -28,26 +29,16 @@ export default function HeroSection() {
             href="https://github.com/lferigutti"
             target="_blank"
             rel="noopener noreferrer"
-            className="p-3 rounded-xl border border-zinc-700 hover:border-zinc-500 hover:bg-zinc-800/50 transition-colors"
+            className="p-3 rounded-xl border border-zinc-700 hover:border-zinc-500 hover:bg-zinc-800/50 text-zinc-400 hover:text-white transition-all"
             aria-label="GitHub"
           >
             <FaGithub className="w-5 h-5" />
           </a>
           <a
-            href="https://www.linkedin.com/in/leonardo-ferigutti-859913122/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="p-3 rounded-xl border border-zinc-700 hover:border-zinc-500 hover:bg-zinc-800/50 transition-colors"
-            aria-label="LinkedIn"
-          >
-            <FaLinkedinIn className="w-5 h-5" />
-          </a>
-          <a
             href="mailto:contact@ferigutti.com"
-            className="p-3 rounded-xl border border-zinc-700 hover:border-zinc-500 hover:bg-zinc-800/50 transition-colors"
-            aria-label="Email"
+            className="px-5 py-2.5 rounded-xl border border-zinc-700 hover:border-zinc-500 hover:bg-zinc-800/50 text-zinc-400 hover:text-white transition-all text-sm font-medium"
           >
-            <FaEnvelope className="w-5 h-5" />
+            Get in touch
           </a>
         </div>
 
@@ -81,7 +72,7 @@ export default function HeroSection() {
                     </span>
                   ))}
                 </div>
-                <span className="inline-flex items-center gap-2 text-sm font-medium bg-white text-zinc-900 px-4 py-2 rounded-lg group-hover:bg-zinc-200 transition-colors">
+                <span className="inline-flex items-center gap-2 text-sm font-medium bg-[var(--foreground)] text-[var(--background)] px-4 py-2 rounded-lg group-hover:opacity-90 transition-opacity">
                   Try it live
                   <FaArrowRight className="w-3 h-3 group-hover:translate-x-1 transition-transform" />
                 </span>

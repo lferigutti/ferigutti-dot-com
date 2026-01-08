@@ -1,5 +1,6 @@
 import BackToNav from "@/components/ui/BackToNav";
 import BlogCard from "@/components/sections/common/BlogCard";
+import ContactCTA from "@/components/sections/common/ContactCTA";
 import { blogMetadata } from "@/utils/metadata";
 
 export default function BlogListPage() {
@@ -25,6 +26,8 @@ export default function BlogListPage() {
           <BlogCard key={post.slug} post={post} />
         ))}
       </section>
+
+      <ContactCTA />
     </main>
   );
 }
