@@ -22,7 +22,7 @@ export default function BlogListPage() {
       </section>
 
       <section className="grid gap-6">
-        {validPosts.map((post) => (
+        {validPosts.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()).map((post) => (
           <BlogCard key={post.slug} post={post} />
         ))}
       </section>

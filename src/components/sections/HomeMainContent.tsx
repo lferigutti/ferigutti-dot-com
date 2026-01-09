@@ -15,7 +15,7 @@ export default function HomeMainContent() {
       return !!post.slug && !!post.date && !!post.tags;
     })
     .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
-    .slice(0, 3); // Showing 3 posts now
+    .slice(0, 3);
 
   return (
     <main className="w-full max-w-5xl mx-auto px-8 pb-24">
