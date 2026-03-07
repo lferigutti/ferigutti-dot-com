@@ -11,6 +11,8 @@ import { metadata as startupAppEs } from "@/app/blog/content/startup-app.es.mdx"
 import { metadata as startupAppEn } from "@/app/blog/content/startup-app.en.mdx";
 import { metadata as foundingEngineerEs } from "@/app/blog/content/founding-engineer.es.mdx";
 import { metadata as foundingEngineerEn } from "@/app/blog/content/founding-engineer.en.mdx";
+import { metadata as munichTechHubEs } from "@/app/blog/content/munich-techhub.es.mdx";
+import { metadata as munichTechHubEn } from "@/app/blog/content/munich-techhub.en.mdx";
 
 export const projectsMetadata = [
   { ...polMeta, slug: "test-politico" },
@@ -59,5 +61,18 @@ export const blogMetadata = [
       es: foundingEngineerEs.description,
     },
     tags: foundingEngineerEn.tags,
+  },
+  {
+    slug: munichTechHubEn.slug,
+    date: munichTechHubEn.date,
+    titles: {
+      en: munichTechHubEn.title,
+      es: munichTechHubEs.title,
+    },
+    description: {
+      en: munichTechHubEn.description,
+      es: munichTechHubEs.description,
+    },
+    tags: munichTechHubEn.tags,
   }
 ];
