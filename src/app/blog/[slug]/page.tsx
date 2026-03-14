@@ -17,11 +17,11 @@ export default async function BlogPostPage({
   let post;
   try {
     post = await import(`@/app/blog/content/${slug}.${lang}.mdx`);
-  } catch (e) {
+  } catch {
     try {
       const fallbackLang = lang === "en" ? "es" : "en";
       post = await import(`@/app/blog/content/${slug}.${fallbackLang}.mdx`);
-    } catch (e2) {
+    } catch {
       notFound();
     }
   }

@@ -1,6 +1,5 @@
 import Image from "next/image";
-import { FaLinkedinIn, FaEnvelope, FaGithub, FaArrowRight } from "react-icons/fa";
-import Button from "../ui/Button";
+import {  FaGithub, FaArrowRight } from "react-icons/fa";
 
 export default function HeroSection() {
   return (

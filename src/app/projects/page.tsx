@@ -1,5 +1,4 @@
 import ProjectCard from "@/components/sections/common/ProjectCard";
-import Link from "next/link";
 import { projectsMetadata } from "@/utils/metadata";
 import ProjectCardSmall from "@/components/sections/common/ProjectCardSmall";
 import BackToNav from "@/components/ui/BackToNav";

@@ -16,10 +16,10 @@ import { metadata as munichTechHubEn } from "@/app/blog/content/munich-techhub.e
 
 export const projectsMetadata = [
   { ...polMeta, slug: "test-politico" },
-  { ...eduMeta, slug: "educational-site" },
   { ...startupMeta, slug: "startup-simulator" },
+  { ...websiteMeta, slug: "personal-website" },
   { ...catalystMeta, slug: "catalyst-platform" },
-  { ...websiteMeta, slug: "personal-website" }
+  { ...eduMeta, slug: "educational-site" },
 ];
 
 export const blogMetadata = [

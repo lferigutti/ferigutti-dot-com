@@ -1,7 +1,6 @@
 "use client";
 
 import { useRouter, usePathname, useSearchParams } from "next/navigation";
-import { HiOutlineGlobeAlt } from "react-icons/hi2";
 
 export default function LanguageSwitcher({ currentLang }: { currentLang: string }) {
   const router = useRouter();
